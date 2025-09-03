@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERENO ESTUDIO - Nuestro Estudio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylos/stylos.css">
+    <link rel="icon" href="assets/logos/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="assets/logos/logo_letras.png" width="170" alt="">
+    </header>
+
+    <div class="contenedor-navegacion">
+        <button class="menu-toggle" aria-label="Menú de navegación">
+            ☰
+        </button>
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#nosotros">Nosotros</a>
+            <a href="galery.html">Galeria</a>
+            <a href="index.html#contacto">Contacto</a>
+            <a href="#">Estudios</a>
+            <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+        </nav>
+    </div>
+
+    <main class="contenedor">
+        <section class="estudio-section">
+            <h2 class="text-center">Nuestro Estudio</h2>
+            <img src="assets/photos/IMG_9053.jpg" alt="Nuestro Estudio" class="estudio-imagen" style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 1rem; margin: 2rem 0;"
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem;">
+                <div style="background-color: rgba(51, 51, 51, 0.8); border-radius: 1rem; padding: 2rem;">
+                    <h3>Equipamiento Profesional</h3>
+                    <ul class="list">
+                        <li>✔ Interfaz de audio profesional</li>
+                        <li>✔ Micrófonos de condensador de alta calidad</li>
+                        <li>✔ Monitores de estudio calibrados</li>
+                        <li>✔ Sala acústicamente tratada</li>
+                        <li>✔ Software profesional de producción</li>
+                    </ul>
+                    <div class="equipo-galeria" style="margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1rem;">Nuestro Equipo en Imágenes</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+                            <img src="assets/kit/microfono.jpg" alt="Micrófono profesional" style="width: 100%; border-radius: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onclick="this.style.transform = this.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)'">
+                            <img src="assets/kit/audient-id4-mkii.jpg" alt="Interfaz de audio Audient id4 mkii" style="width: 100%; border-radius: 0.5rem; cursor: pointer; transition: transform 0.3s ease;" onclick="this.style.transform = this.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)'">
+                        </div>
+                    </div>
+                </div>
+                <div style="background-color: rgba(51, 51, 51, 0.8); border-radius: 1rem; padding: 2rem;">
+                    <h3>Servicios</h3>
+                    <ul class="list">
+                        <li>✔ Grabación profesional</li>
+                        <li>✔ Mezcla y masterización</li>
+                        <li>✔ Producción musical</li>
+                        <li>✔ Arreglos musicales</li>
+                        <li>✔ Asesoría musical</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-20">
+            <h2 class="text-center">Nuestro Equipo</h2>
+            <div class="d-flex" style="flex-wrap: wrap; justify-content: center;">
+                <div class="equipo-card">
+                    <img src="assets/photos/who-2.jpg" alt="Angel de Jesus">
+                    <h3>Angel de Jesus Gomez Díaz</h3>
+                    <p>🎧 Ingeniero de audio y productor Musical</p>
+                    <p>Especialista en mezcla y masterización con años de experiencia en la industria musical.</p>
+                </div>
+                <div class="equipo-card">
+                    <img src="assets/team/angel_luna.jpg" alt="Miembro 2">
+                    <h3>Jose Angel Luna</h3>
+                    <p>🎸 Compositor e instrumentista</p>
+                    <p>Experto en arreglos musicales y producción de diversos géneros.</p>
+                </div>
+                <div class="equipo-card">
+                    <img src="assets/team/josue_castro.jpg" alt="Miembro 3">
+                    <h3>Angel Josue Martinez Castro</h3>
+                    <p>🎬 Director de video y compositor</p>
+                    <p>Especialista en grabación de video y producción de diversos géneros.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-20">
+            <h2 class="text-center">Artistas Destacados</h2>
+            <div class="artistas-destacados">
+                <div class="carousel-controls">
+                    <button class="carousel-button prev-button">❮</button>
+                    <button class="carousel-button next-button">❯</button>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <div class="artista-card">
+                            <img src="assets/artists/javier_olguin2.jpg" alt="Javier Olguín">
+                            <h3>Javier Olguín</h3>
+                            <p>Artista de Rancho Humilde</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="artista-card">
+                            <img src="assets/artists/angel_luna.jpg" alt="Angel Luna">
+                            <h3>Angel Luna</h3>
+                            <p>Artista Destacado</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="artista-card">
+                            <img src="assets/artists/alejandro_martinez.jpg" alt="Alejandro Martínez">
+                            <h3>Alejandro Martínez</h3>
+                            <p>Artista Destacado</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="artista-card">
+                            <img src="assets/artists/arad.jpg" alt="Arad">
+                            <h3>Arad</h3>
+                            <p>Artista Destacado</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="artista-card">
+                            <img src="assets/artists/el_catrin.jpg" alt="El Catrín">
+                            <h3>El Catrín</h3>
+                            <p>Artista Destacado</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="artista-card">
+                            <img src="assets/artists/giselle_magallanes.jpg" alt="Giselle Magallanes">
+                            <h3>Giselle Magallanes</h3>
+                            <p>Artista Destacado</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="artista-card">
+                            <img src="assets/artists/miguel.jpg" alt="Miguel">
+                            <h3>Miguel</h3>
+                            <p>Artista Destacado</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="artista-card">
+                            <img src="assets/artists/4_ases.jpg" alt="4 Ases">
+                            <h3>4 Ases</h3>
+                            <p>Artista Destacado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20">
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="redes icons-contact">
+            <a href="https://www.instagram.com/sereno_estudio.mx/" target="_blank">
+                <img src="assets/icons/instagram.png" alt="">
+            </a>
+            <a href="https://www.tiktok.com/@sereno.estudio?_t=ZM-8v9n8rLayc3&_r=1" target="_blank">
+                <img src="assets/icons/tik-tok.png" alt="">
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=5214981344448&text&type=phone_number&app_absent=0" target="_blank">
+                <img src="assets/icons/whatsapp.png" alt="">
+            </a>
+        </div>
+        <p>SERENO ESTUDIO DE GRABACIÓN, MEZCLA Y MASTER</p>
+    </footer>
+
+    <script>
+        // Menú hamburguesa
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navPrincipal = document.querySelector('.nav-principal');
+
+        menuToggle.addEventListener('click', () => {
+            navPrincipal.classList.toggle('show');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-principal a').forEach(link => {
+            link.addEventListener('click', () => {
+                navPrincipal.classList.remove('show');
+            });
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.contenedor-navegacion')) {
+                navPrincipal.classList.remove('show');
+            }
+        });
+
+        // Carrusel de artistas
+        const carousel = document.querySelector('.carousel-container');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            const slideWidth = window.innerWidth >= 768 ? 33.333 : 100;
+            const maxSlides = window.innerWidth >= 768 ? slides.length - 2 : slides.length - 1;
+            if (currentSlide > maxSlides) currentSlide = 0;
+            carousel.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        });
+
+        // Autoplay del carrusel con transición suave
+        const autoplayInterval = 5000; // 5 segundos
+        let autoplayTimer;
+
+        function startAutoplay() {
+            stopAutoplay(); // Detener el autoplay anterior si existe
+            autoplayTimer = setInterval(() => {
+                const maxSlides = window.innerWidth >= 768 ? slides.length - 2 : slides.length - 1;
+                currentSlide = (currentSlide + 1) % (maxSlides + 1);
+                updateCarousel();
+            }, autoplayInterval);
+        }
+
+        function stopAutoplay() {
+            clearInterval(autoplayTimer);
+        }
+
+        // Iniciar autoplay
+        startAutoplay();
+
+        // Detener autoplay al interactuar con los botones
+        prevButton.addEventListener('mouseenter', stopAutoplay);
+        prevButton.addEventListener('mouseleave', startAutoplay);
+        nextButton.addEventListener('mouseenter', stopAutoplay);
+        nextButton.addEventListener('mouseleave', startAutoplay);
+
+        // Detener autoplay al pasar el mouse por el carrusel
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+
+        // Inicializar el carrusel
+        updateCarousel();
+    </script>
+</body>
+</html>

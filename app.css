@@ -1,0 +1,293 @@
+html {
+    box-sizing: border-box; /* para cuando agregemos un width a un elemento y despues añadeamos un padding no modifique el tamaño de ese elemento*/
+    font-size: 62.5%; /* 1rem = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/** Globales **/
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+hr {
+    border: none; /* Elimina el borde por defecto */
+    height: 5px; /* Grosor de la línea */
+    background-color:#FCFCFC; /* Color de la línea */
+    width: 50%; /* Ancho de la línea */
+    margin: 20px auto; /* Centrar la línea */
+}
+
+.btn {
+    background-color: #ccae4d00;
+    border: 3px solid #ccae4d;
+
+    display: block;
+    color: #e1e1e1;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #ccae4d;
+    cursor:pointer;
+}
+
+
+/** Utilidades **/ 
+.text-center {
+    text-align: center;
+}
+
+.max-width-30 {
+    max-width: 30rem;
+}
+
+.d-flex {
+    display: flex;
+    /* flex-direction: row; es el default de flex */
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.mt-20 {
+    margin-top: 100px;
+}
+
+/** Header y navegacion **/
+
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.nombre-sitio span {
+    color: #037bc0;
+}
+
+.contenedor-navegacion {
+    border-top: 0.1rem solid #000;
+}
+
+.nav-principal {
+    padding: 1rem 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-principal a {
+    color: #FFF;
+}
+
+.nav-principal a:hover {
+    color: #D2BF7E;
+}
+
+
+/** Bloque principal **/
+.title {
+    line-height: 1;
+}
+.sobre-nosotros {
+    background-image: linear-gradient( to right, transparent 50%, #ffffff00 50%, #d2bf7ea0 100%)
+    , url('');
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 130rem;
+    background-position: left center;
+    margin-top: 1rem;
+}
+
+ /** con display flex **/
+.sobre-nosotros-grid {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.texto-nosotros {
+    flex-basis: 50%;
+    padding-left: 10rem;
+    color: white;
+}
+
+.icons-contact {
+    padding: 5rem 10rem 0 0;
+}
+
+.icons-contact img {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 14rem;
+    margin-left: 2rem;
+}
+
+.icons-contact img:hover {
+    cursor: pointer;
+    background-color: #D2BF7E;
+}
+
+/** Contenido Principal **/
+/* quienes somos */
+.img-container {
+    min-width: 350px;
+    max-width: 400px;
+    margin-left: 20px;
+    /* overflow: hidden;  */
+  }
+  
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+    clip-path: circle(50%);
+}
+
+.who-container p {
+    padding: 0 50px ;
+}
+
+.who-card .description{
+text-align: center;
+}
+
+.list {
+    list-style: none;
+}
+
+/* Trabajos destacados */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.video {
+    width: 100%;
+    max-width: 600px;
+    height: 315px;
+    margin-bottom: 20px;
+}
+  
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+    width: 100%;
+}
+  
+.item {
+    width: calc(50% - 10px);
+    /* background: lightgray; */
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+label, input, textarea, button {
+    margin-bottom: 10px;
+}
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    padding: 10px;
+    background: #ccae4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* our ubication */
+.addres-container {
+    font-size: 20px;
+}
+
+.ubication-description {
+    padding: 60px;
+}
+
+.ubication-description p{
+    text-align: left;
+}
+
+#mapa {
+    width: 100%;
+    height: 400px;
+    min-width: 100%;
+    background: rgba(128, 128, 128, 0.247);
+}
+
+
+/** Footer **/
+
+.site-footer {
+    border-top: .1rem solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+
+.site-footer h3 {
+    margin-bottom: .5rem;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footr-menu a {
+    display: block;
+}  
+
+.copyright {
+    margin: 5rem;
+    text-align: center;
+}
+

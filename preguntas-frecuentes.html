@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERENO ESTUDIO - Preguntas Frecuentes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylos/stylos.css">
+    <link rel="icon" href="assets/logos/logo.png" type="image/png">
+    <style>
+        .faq-section {
+            padding: 2rem;
+            background-color: rgba(33, 33, 33, 0.9);
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+        .faq-item {
+            background-color: rgba(51, 51, 51, 0.8);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .faq-item h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .faq-item p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        .faq-category h2 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/logos/logo_letras.png" width="170" alt="">
+    </header>
+
+    <div class="contenedor-navegacion">
+        <button class="menu-toggle" aria-label="Menú de navegación">
+            ☰
+        </button>
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#nosotros">Nosotros</a>
+            <a href="index.html#galeria">Galeria</a>
+            <a href="index.html#contacto">Contacto</a>
+            <a href="estudios.html">Estudios</a>
+            <a href="#">Preguntas frecuentes</a>
+        </nav>
+    </div>
+
+    <main class="contenedor">
+        <section class="faq-section">
+            <div class="faq-category">
+                <h2>Sobre Nuestros Servicios</h2>
+                <div class="faq-item">
+                    <h3>¿Qué servicios ofrecen en SERENO ESTUDIO?</h3>
+                    <p>Ofrecemos servicios completos de grabación, mezcla, masterización, producción musical y asesoría musical. Contamos con equipamiento profesional y un equipo experimentado para garantizar la mejor calidad en tus proyectos.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Cuánto tiempo toma una sesión de grabación?</h3>
+                    <p>El tiempo varía según el proyecto. Una sesión típica puede durar desde 2 horas para una grabación sencilla hasta varias sesiones para proyectos más complejos. Recomendamos consultar directamente para una estimación más precisa.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Trabajan con todos los géneros musicales?</h3>
+                    <p>Sí, tenemos experiencia trabajando con diversos géneros musicales. Nuestro equipo está capacitado para adaptar nuestro trabajo a las necesidades específicas de cada estilo.</p>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>Reservas y Pagos</h2>
+                <div class="faq-item">
+                    <h3>¿Cómo puedo reservar una sesión?</h3>
+                    <p>Puedes contactarnos a través de WhatsApp o nuestras redes sociales para programar tu sesión. Recomendamos reservar con anticipación para asegurar la disponibilidad.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Cuáles son las formas de pago aceptadas?</h3>
+                    <p>Aceptamos efectivo y transferencias bancarias. Se requiere un anticipo para confirmar la reserva, y el resto se paga al finalizar la sesión.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Qué incluye el precio de una sesión?</h3>
+                    <p>El precio incluye el tiempo de estudio, el uso de nuestro equipamiento profesional y la asistencia técnica. Los servicios adicionales como mezcla y masterización se cotizan por separado.</p>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>Aspectos Técnicos</h2>
+                <div class="faq-item">
+                    <h3>¿Qué debo llevar a mi sesión de grabación?</h3>
+                    <p>Recomendamos traer tus instrumentos personales, una memoria USB para respaldo, y cualquier referencia musical que consideres importante. También es bueno venir preparado y haber ensayado previamente.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Qué formato de archivo recibo al final?</h3>
+                    <p>Entregamos los archivos en formato WAV de alta calidad. También podemos proporcionar otros formatos según tus necesidades específicas.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Tienen servicio de músicos de sesión?</h3>
+                    <p>Sí, podemos conectarte con músicos profesionales para tu proyecto. El costo varía según el instrumento y el tiempo requerido.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20">
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="redes icons-contact">
+            <a href="https://www.instagram.com/sereno_estudio.mx/" target="_blank">
+                <img src="assets/icons/instagram.png" alt="">
+            </a>
+            <a href="https://www.tiktok.com/@sereno.estudio?_t=ZM-8v9n8rLayc3&_r=1" target="_blank">
+                <img src="assets/icons/tik-tok.png" alt="">
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=5214981344448&text&type=phone_number&app_absent=0" target="_blank">
+                <img src="assets/icons/whatsapp.png" alt="">
+            </a>
+        </div>
+        <p>SERENO ESTUDIO DE GRABACIÓN, MEZCLA Y MASTER</p>
+    </footer>
+
+    <script>
+        // Menú hamburguesa
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navPrincipal = document.querySelector('.nav-principal');
+
+        menuToggle.addEventListener('click', () => {
+            navPrincipal.classList.toggle('show');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-principal a').forEach(link => {
+            link.addEventListener('click', () => {
+                navPrincipal.classList.remove('show');
+            });
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.contenedor-navegacion')) {
+                navPrincipal.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

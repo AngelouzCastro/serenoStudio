@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Sereno</title>
+    <link rel="stylesheet" href="stylos/stylos.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="icon" href="assets/logos/logo.png" type="image/png">
+    <style>
+        .gallery-container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .gallery-item img {
+                height: 300px;
+            }
+        }
+        .contenedor-navegacion {
+            position: relative;
+            z-index: 1001;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .nav-principal {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 10rem;
+        }
+
+        .nav-principal.show {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2.4rem;
+            cursor: pointer;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-principal {
+                display: none;
+                padding: 1rem;
+            }
+
+            .nav-principal.show {
+                display: flex;
+            }
+
+            .nav-principal a {
+                padding: 1rem 0;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="assets/logos/logo_letras.png" width="170" alt="">
+    </header>
+
+    <div class="contenedor-navegacion">
+        <button class="menu-toggle" aria-label="Menú de navegación">
+            ☰
+        </button>
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#nosotros">Nosotros</a>
+            <a href="#">Galeria</a>
+            <a href="index.html#contacto">Contacto</a>
+            <a href="estudios.html">Estudios</a>
+            <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+        </nav>
+    </div>
+
+    <main>
+        <div class="gallery-container">
+            <h1>Galería de Fotos</h1>
+            <div class="gallery-grid" id="galleryGrid">
+            </div>
+        </div>
+
+        <div id="imageModal" class="modal">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" src="" alt="Imagen ampliada">
+        </div>
+    </main>
+
+    <footer class="mt-20">
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="redes icons-contact">
+            <a href="https://www.instagram.com/sereno_estudio.mx/" target="_blank">
+                <img src="assets/icons/instagram.png" alt="">
+            </a>
+            <a href="https://www.tiktok.com/@sereno.estudio?_t=ZM-8v9n8rLayc3&_r=1" target="_blank">
+                <img src="assets/icons/tik-tok.png" alt="">
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=5214981344448&text&type=phone_number&app_absent=0" target="_blank">
+                <img src="assets/icons/whatsapp.png" alt="">
+            </a>
+        </div>
+        <p>SERENO ESTUDIO DE GRABACIÓN, MEZCLA Y MASTER</p>
+    </footer>
+
+    <script>
+        // Menú hamburguesa
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navPrincipal = document.querySelector('.nav-principal');
+
+        menuToggle.addEventListener('click', () => {
+            navPrincipal.classList.toggle('show');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-principal a').forEach(link => {
+            link.addEventListener('click', () => {
+                navPrincipal.classList.remove('show');
+            });
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.contenedor-navegacion')) {
+                navPrincipal.classList.remove('show');
+            }
+        });
+
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.getElementsByClassName('close-modal')[0];
+        const galleryGrid = document.getElementById('galleryGrid');
+
+        // Lista de imágenes en la carpeta assets/galery
+        const images = [
+            'IMG_3858.jpg', 'IMG_3860.jpg', 'IMG_3861.jpg', 'IMG_3864.jpg',
+            'IMG_3872.jpg', 'IMG_3874.jpg', 'IMG_3875.jpg', 'IMG_3880.jpg',
+            'IMG_3883.jpg', 'IMG_3884.jpg', 'IMG_3886.jpg', 'IMG_3887.jpg',
+            'IMG_3892.jpg', 'IMG_3893.jpg', 'IMG_3909.jpg', '_MG_3895.jpg',
+            '_MG_3901.jpg', '_MG_3906.jpg', '_MG_3912.jpg', '_MG_3913.jpg',
+            '_MG_3915.jpg', '_MG_3916.jpg', '_MG_3917.jpg', '_MG_3922.jpg',
+            '_MG_3923.jpg', '_MG_3926.jpg', '_MG_3928.jpg', '_MG_3932.jpg',
+            '_MG_3933.jpg', '_MG_3934.jpg', '_MG_3935.jpg', '_MG_3936.jpg',
+            '_MG_3939.jpg', '_MG_3940.jpg', '_MG_3941.jpg', '_MG_3942.jpg',
+            '_MG_3943.jpg', '_MG_3945.jpg', '_MG_3949.jpg', '_MG_3955.jpg',
+            '_MG_3956.jpg', '_MG_3969.jpg', '_MG_3971.jpg', '_MG_3972.jpg',
+            '_MG_3975.jpg', '_MG_3976.jpg', '_MG_3978.jpg', '_MG_3980.jpg',
+            '_MG_3981.jpg', '_MG_3982.jpg', '_MG_3983.jpg', '_MG_3984.jpg',
+            '_MG_3985.jpg'
+        ];
+
+        // Cargar las imágenes dinámicamente
+        images.forEach((image, index) => {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            
+            const img = document.createElement('img');
+            img.loading = 'lazy'; // Agregar carga lazy para optimizar
+            img.onerror = function() {
+                console.error(`Error al cargar la imagen: ${image}`);
+                this.src = 'assets/logos/logo.png'; // Imagen de respaldo en caso de error
+            };
+            img.src = `assets/galery/${image}`;
+            img.alt = `Foto ${index + 1}`;
+            
+            galleryItem.appendChild(img);
+            galleryGrid.appendChild(galleryItem);
+
+            galleryItem.addEventListener('click', function() {
+                try {
+                    modal.style.display = 'block';
+                    modalImg.src = img.src;
+                } catch (error) {
+                    console.error('Error al abrir la imagen:', error);
+                }
+            });
+        });
+
+        // Mejorar el manejo del cierre del modal
+        closeModal.addEventListener('click', function() {
+            try {
+                modal.style.display = 'none';
+                modalImg.src = ''; // Limpiar la imagen del modal
+            } catch (error) {
+                console.error('Error al cerrar el modal:', error);
+            }
+        });
+
+        // Cerrar modal al hacer clic fuera de la imagen
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                try {
+                    modal.style.display = 'none';
+                    modalImg.src = '';
+                } catch (error) {
+                    console.error('Error al cerrar el modal:', error);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
